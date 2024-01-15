@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+  <changeSet id="1.3" author="m.surmach">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="tracking" schemaName="parcel_service"/>
+      </not>
+    </preConditions>
+    <createTable tableName="tracking" schemaName="parcel_service">
+      <column name="id" type="BIGSERIAL">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="tracking_status" type="VARCHAR(20)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="timestamp" type="TIMESTAMP">
+        <constraints nullable="false"/>
+      </column>
+      <column name="tracking_number" type="VARCHAR(13)">
+        <constraints foreignKeyName="fk_tracking_parcel" references="parcel_service.parcels(tracking_number)"/>
+      </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>
