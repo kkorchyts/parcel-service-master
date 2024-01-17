@@ -1,0 +1,19 @@
+grpc:
+  client:
+    notification-service:
+      address: static://localhost:8002
+      negotiation-type: plaintext
+    user-service:
+      address: static://localhost:8001
+      negotiation-type: plaintext
+  port: 8000
+spring:
+  application:
+    name: parcel-service
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: password
+    url: jdbc:postgresql://localhost:5440/testdb
+    username: postgres
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
