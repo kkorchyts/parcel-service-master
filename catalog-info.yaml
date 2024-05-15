@@ -5,8 +5,7 @@ metadata:
   annotations:
     github.com/project-slug: MSurmach/parcel-service
     backstage.io/techdocs-ref: dir:.
-    dependencies:
-      - "notification-service"
+    dependencies: "notification-service"
 spec:
   type: service
   lifecycle: experimental
