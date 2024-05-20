@@ -9,6 +9,7 @@ spec:
   type: service
   lifecycle: experimental
   owner: team-a
+  system: delivery-portal
   dependsOn:
     - Component:notification-service
     - Component:user-service
