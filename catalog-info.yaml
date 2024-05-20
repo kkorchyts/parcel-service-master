@@ -11,3 +11,4 @@ spec:
   owner: team-a
   dependsOn:
     - Component:notification-service
+    - Component:user-service
