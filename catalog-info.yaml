@@ -13,3 +13,4 @@ spec:
   dependsOn:
     - Component:notification-service
     - Component:user-service
+    - Component:proto-common
