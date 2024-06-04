@@ -3,7 +3,8 @@ kind: Component
 metadata:
   name: "parcel-service"
   annotations:
-    github.com/project-slug: MSurmach/parcel-service
+    github.com/project-slug: kkorchyts/parcel-service
+    github.com/project-cicd: https://github.com/kkorchyts/user-service/actions
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
