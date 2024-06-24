@@ -30,10 +30,11 @@ Ensure you have the following installed before setting up the service:
 To set up the Parcel Service locally, follow these steps:
 
 1. **Clone the Repository:**
-   ```bash
+   ```
    git clone https://github.com/svetamint/kkorchyts-parcel-service
    cd parcel-service
    mvn clean install
+   ```
 
 ## Running Service
 
