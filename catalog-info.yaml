@@ -3,11 +3,15 @@ kind: Component
 metadata:
   name: "parcel-service"
   annotations:
-    github.com/project-slug: MSurmach/parcel-service
+    github.com/project-slug: kkorchyts/parcel-service
+    github.com/project-cicd: https://github.com/kkorchyts/parcel-service/actions
     backstage.io/techdocs-ref: dir:.
-    dependences:
-      - notification-service
 spec:
   type: service
   lifecycle: experimental
   owner: team-a
+  system: delivery-portal
+  dependsOn:
+    - Component:notification-service
+    - Component:user-service
+    - Component:proto-common
