@@ -6,6 +6,7 @@ metadata:
     github.com/project-slug: kkorchyts/parcel-service
     github.com/project-cicd: https://github.com/kkorchyts/parcel-service/actions
     backstage.io/techdocs-ref: dir:.
+    backstage.io/version: "1.0.0"
 spec:
   type: service
   lifecycle: experimental
